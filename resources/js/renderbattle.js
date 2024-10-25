@@ -1,8 +1,8 @@
 function firstRender(yourmon, theirmon) {
-    let yourhp = yourmon.currenthp;
-    const yourmaxhp = yourmon.maxhp;
-    let theirhp = theirmon.currenthp;
-    const theirmaxhp = theirmon.maxhp;
+    let yourhp = Math.ceil(yourmon.currenthp);
+    const yourmaxhp = Math.ceil(yourmon.maxhp);
+    let theirhp = Math.ceil(theirmon.currenthp);
+    const theirmaxhp = Math.ceil(theirmon.maxhp);
     const topsprite = theirmon.sprites.front
     const bottomsprite = yourmon.sprites.back
 
@@ -25,12 +25,12 @@ function firstRender(yourmon, theirmon) {
     bottomLvlElement.innerHTML = `<strong>lvl ${yourmon.level}</strong>`;
 
     const bottomHealthFillElement = document.getElementById("top-health-fill");
-    bottomHealthFillElement.style.width = `${(yourhp / yourmaxhp) * 80}%`;
+    bottomHealthFillElement.style.width = `${(yourhp / yourmaxhp) * 100}%`;
     const bottomHealthTextElement = document.getElementById("top-health-text");
     bottomHealthTextElement.textContent = `${yourhp}/${yourmaxhp}`;
 
     const topHealthFillElement = document.getElementById("bottom-health-fill");
-    topHealthFillElement.style.width = `${(theirhp / theirmaxhp) * 80}%`;
+    topHealthFillElement.style.width = `${(theirhp / theirmaxhp) * 100}%`;
     const topHealthTextElement = document.getElementById("bottom-health-text");
     topHealthTextElement.textContent = `${theirhp}/${theirmaxhp}`;
 }
