@@ -55,7 +55,3 @@ class animon {
         }
     }
 }
-
-// Example of creating a new animon
-const myAnimon = new animon("Cocosip", 10);
-console.log(myAnimon);
