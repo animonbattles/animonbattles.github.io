@@ -1,3 +1,4 @@
+// Made by Bjarnos, reuse of any kind (without credits) is hereby allowed
 console.log("IndexedDB script loaded.");
 
 function initDB(datastore) {
