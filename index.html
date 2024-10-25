@@ -11,7 +11,10 @@
         // Test code
         document.addEventListener("DOMContentLoaded", function() {
             saveDataStore('PokemonStore', 'Bulbasaur', { level: 12, att: 7 });
-            console.log(getDataStore('PokemonStore', 'Bulbasaur'));
+            (async () => {
+              const result = await getDataStore('PokemonStore', 'Bulbasaur');
+              console.log(result);
+            })();
         });
     </script>
 </head>
