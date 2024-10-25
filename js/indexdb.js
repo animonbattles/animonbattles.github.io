@@ -50,12 +50,13 @@ function removeDataStore(datastore, key) {
     }).catch(error => console.error(error));
 }
 
-function getDataStore(datastore, key) {
-    return new Promise((resolve, reject) => {
-        initDB(datastore).then(db => {
-            const transaction = db.transaction(datastore, 'readonly');
-            const objectStore = transaction.objectStore(datastore);
+async function getDataStore(datastore, key) {
+    try {
+        const db = await initDB(datastore);
+        const transaction = db.transaction(datastore, 'readonly');
+        const objectStore = transaction.objectStore(datastore);
 
+        return new Promise((resolve, reject) => {
             const request = objectStore.get(key);
 
             request.onsuccess = () => {
@@ -71,6 +72,9 @@ function getDataStore(datastore, key) {
                 console.error(`Error getting ${key}: `, event.target.error);
                 reject(event.target.error);
             };
-        }).catch(error => reject(error));
-    });
+        });
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
 }
