@@ -1,7 +1,4 @@
-const species = [
-    { name: "Cocosip", basehp: 1000, basespeed: 10, types: ["Grass"] },
-    { name: "Cocannon", basehp: 3000, basespeed: 8, types: ["Grass"] },
-];
+import species from "../../info/animon.js";
 
 const moves = {
     Grass: ["Solar Beam", "Grass Whip", "Mudshot", "Entanglement"],
