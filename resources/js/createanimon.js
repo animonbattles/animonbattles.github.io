@@ -1,10 +1,5 @@
 import species from "../../info/animon.js";
-
-const moves = {
-    Grass: ["Solar Beam", "Grass Whip", "Mudshot", "Entanglement"],
-    Fire: ["Flame Thrower", "Blaze Kick", "Inferno"],
-    Water: ["Water Gun", "Aqua Tail", "Hydro Pump"]
-};
+import moves from "../../info/moves.js";
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
