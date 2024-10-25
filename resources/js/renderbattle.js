@@ -34,4 +34,8 @@ function firstRender(yourmon, theirmon) {
     const topHealthTextElement = document.getElementById("top-health-text");
     topHealthTextElement.textContent = `${theirhp}/${theirmaxhp}`;
 }
-window.firstRender = firstRender;
+
+function startBattle(yourmon, theirMon) {
+    firstRender(yourmon, theirMon)
+}
+window.startBattle = startBattle;
