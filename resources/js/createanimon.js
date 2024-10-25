@@ -1,3 +1,4 @@
+// Made by Bjarnos, exclusively for Animon Battles, reuse of any kind is not allowed
 import species from "https://cdn.jsdelivr.net/gh/animonbattles/animonbattles.github.io/resources/info/animon.js";
 import moves from "https://cdn.jsdelivr.net/gh/animonbattles/animonbattles.github.io/resources/info/moves.js";
 
