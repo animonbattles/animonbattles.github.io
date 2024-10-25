@@ -10,12 +10,12 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.catch-box .pokemon-image {
+.catch-box .animon-image {
     background-color: #e0e0e0;
     position: absolute;
 }
 
-.catch-box .pokemon-image.top {
+.catch-box .animon-image.top {
     top: 10%;
     right: 10%;
     transform: scaleX(-1);
@@ -23,14 +23,14 @@
     width: 20vh;
 }
 
-.catch-box .pokemon-image.bottom {
+.catch-box .animon-image.bottom {
     top: 50%;
     right: 60%;
     height: 30%;
     width: 30vh;
 }
 
-.pokestats-top {
+.animonstats-top {
     position: absolute;
     top: 11%;
     right: calc(10% + 180px);
@@ -42,7 +42,7 @@
     height: 6%
 }
 
-.pokemon-name-level {
+.animon-name-level {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
