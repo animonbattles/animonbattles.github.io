@@ -55,3 +55,5 @@ class animon {
         }
     }
 }
+
+window.animon = animon;
