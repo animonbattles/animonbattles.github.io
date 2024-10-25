@@ -24,14 +24,14 @@ function firstRender(yourmon, theirmon) {
     const bottomLvlElement = document.getElementById("bottom-lvl");
     bottomLvlElement.innerHTML = `<strong>lvl ${yourmon.level}</strong>`;
 
-    const bottomHealthFillElement = document.getElementById("top-health-fill");
+    const bottomHealthFillElement = document.getElementById("bottom-health-fill");
     bottomHealthFillElement.style.width = `${(yourhp / yourmaxhp) * 100}%`;
-    const bottomHealthTextElement = document.getElementById("top-health-text");
+    const bottomHealthTextElement = document.getElementById("bottom-health-text");
     bottomHealthTextElement.textContent = `${yourhp}/${yourmaxhp}`;
 
-    const topHealthFillElement = document.getElementById("bottom-health-fill");
+    const topHealthFillElement = document.getElementById("top-health-fill");
     topHealthFillElement.style.width = `${(theirhp / theirmaxhp) * 100}%`;
-    const topHealthTextElement = document.getElementById("bottom-health-text");
+    const topHealthTextElement = document.getElementById("top-health-text");
     topHealthTextElement.textContent = `${theirhp}/${theirmaxhp}`;
 }
 window.firstRender = firstRender;
