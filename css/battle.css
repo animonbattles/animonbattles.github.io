@@ -1,0 +1,123 @@
+/* Made by Bjarnos, reuse is not allowed */
+.catch-box {
+    width: 99%;
+    height: 99%;
+    padding: 0%;
+    border: 5px solid #333;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.catch-box .pokemon-image {
+    background-color: #e0e0e0;
+    position: absolute;
+}
+
+.catch-box .pokemon-image.top {
+    top: 10%;
+    right: 10%;
+    transform: scaleX(-1);
+    height: 20%;
+    width: 20vh;
+}
+
+.catch-box .pokemon-image.bottom {
+    top: 50%;
+    right: 60%;
+    height: 30%;
+    width: 30vh;
+}
+
+.pokestats-top {
+    position: absolute;
+    top: 11%;
+    right: calc(10% + 180px);
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 6%
+}
+
+.pokemon-name-level {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.health-container {
+    display: flex;
+    align-items: center;
+    height: 28%;
+}
+
+.health-bar {
+    width: 80%;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 2%;
+}
+
+.health-fill {
+    height: 100%;
+    width: 70%;
+    background-color: #28a745;
+}
+
+.health-text {
+    font-weight: bold;
+}
+
+.catch-box-buttons {
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    background-color: #f9f9f9;
+    position: absolute;
+    bottom: 0%;
+    border-top: 5px solid #333;
+    border-radius: 0 0 15px 15px;
+}
+
+.button-group-top, .button-group-bottom {
+    display: flex;
+    justify-content: space-around;
+    margin: 1vh 0;
+}
+
+.button-group-top button, .button-group-bottom button {
+    width: 40%;
+    height: 10vh;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 2.5em;
+}
+
+.fight-button {
+    background-color: #e63946;
+    box-shadow: 0px 2px 8px rgba(150, 0, 0, 0.4);
+}
+
+.switch-button {
+    background-color: #457b9d;
+    box-shadow: 0px 2px 8px rgba(0, 70, 130, 0.4);
+}
+
+.item-button {
+    background-color: #f4a261;
+    box-shadow: 0px 2px 8px rgba(200, 90, 0, 0.4);
+}
+
+.run-button {
+    background-color: #2a9d8f;
+    box-shadow: 0px 2px 8px rgba(0, 100, 60, 0.4);
+}
