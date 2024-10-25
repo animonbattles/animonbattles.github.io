@@ -15,3 +15,5 @@ const species = [
      },
      basehp: 3000, basespeed: 8, baseattack: 100 },
 ];
+
+export default species;
