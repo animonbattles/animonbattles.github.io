@@ -1,7 +1,7 @@
 /* Made by Bjarnos, reuse is not allowed */
 .catch-box {
     width: 99%;
-    height: 97vh;
+    height: 96vh;
     padding: 0%;
     border: 5px solid #333;
     border-radius: 15px;
@@ -104,7 +104,7 @@
 }
 
 .button-group-top button, .button-group-bottom button {
-    width: 40%;
+    width: calc(50% - 10px);
     height: 10vh;
     padding: 8px;
     border: none;
