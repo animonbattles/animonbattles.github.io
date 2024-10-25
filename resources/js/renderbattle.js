@@ -34,3 +34,4 @@ function firstRender(yourmon, theirmon) {
     const topHealthTextElement = document.getElementById("bottom-health-text");
     topHealthTextElement.textContent = `${theirhp}/${theirmaxhp}`;
 }
+window.firstRender = firstRender;
