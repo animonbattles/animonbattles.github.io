@@ -1,5 +1,5 @@
-import * as species from "https://cdn.jsdelivr.net/gh/animonbattles/animonbattles.github.io/resources/info/animon.js";
-import * as moves from "https://cdn.jsdelivr.net/gh/animonbattles/animonbattles.github.io/resources/info/moves.js";
+import species from "https://cdn.jsdelivr.net/gh/animonbattles/animonbattles.github.io/resources/info/animon.js";
+import moves from "https://cdn.jsdelivr.net/gh/animonbattles/animonbattles.github.io/resources/info/moves.js";
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
