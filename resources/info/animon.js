@@ -1,3 +1,4 @@
+// To reuse, please contact .bjarnos on discord for permissions.
 // baseattack is in %
 const species = [
     { name: "Cocosip",
