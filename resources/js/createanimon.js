@@ -46,12 +46,14 @@ class animon {
             this.currenthp = this.maxhp;
             this.psr = currentpsr;
             this.moveset = generateMoveset(speciesData.types);
+            this.sprites = speciesData.sprites
         } else {
             console.error("Species not found!");
             this.maxhp = 0;
             this.currenthp = 0;
             this.psr = currentpsr;
             this.moveset = [];
+            this.sprites = { front: "", back: "" }
         }
     }
 }
