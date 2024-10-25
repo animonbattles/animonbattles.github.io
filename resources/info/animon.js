@@ -10,8 +10,8 @@ const species = [
     { name: "Cocannon",
      types: ["Grass"],
      sprites: {
-       front: "https://i.postimg.cc/tgRz799z/cocosipfront.webp",
-       back: "https://i.postimg.cc/909dsMBc/cocosipback.webp",
+       front: "https://i.postimg.cc/y8yPVDCd/cocannonfront.webp",
+       back: "",
      },
      basehp: 3000, basespeed: 8, baseattack: 100 },
 ];
