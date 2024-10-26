@@ -1,11 +1,26 @@
+const types = {
+    Grass: "#26ad50",
+};
+
 const moves = {
-    Grass: ["Solar Beam", "Grass Whip", "Mudshot", "Entanglement"],
-};
-
-const data = {
     "Solar Beam": {
-        name: "f"
-    }
+        type: "Grass",
+        class: "beam"
+    },
+    "Grass Whip": {
+        type: "Grass",
+        class: "slash"
+    },
+    "Mudshot": {
+        type: "Grass",
+        class: "projectile",
+        amount: 3
+    },
+    "Entanglement": {
+        type: "Grass",
+        class: "beam",
+        modification: "double"
+    },
 };
 
-export default { moves, data }
+export default { types, moves }
