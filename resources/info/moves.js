@@ -29,6 +29,7 @@ const classes = {
         beam.src = movedata.texture || "";
         beam.style.position = "absolute";
         beam.style.height = "100px"; // beam width
+        beam.style.width = "10px"
         document.body.appendChild(beam);
 
         const startX = pos1.x;
