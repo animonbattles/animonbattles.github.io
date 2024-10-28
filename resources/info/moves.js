@@ -25,41 +25,42 @@ const moves = {
 
 const classes = {
     beam: (movedata, pos1, pos2) => {
-        console.log("Started")
+        console.log("Started");
+
         const beam = document.createElement("img");
         beam.src = movedata.texture || "";
-        beam.style.position = "absolute"; // Makes it easier to position for animation
-        beam.style.width = "50px";
-        beam.style.height = "10px";
+        beam.style.position = "absolute"; // Absolute for precise positioning
+        beam.style.width = "10px"; // Initial width (small size)
+        beam.style.height = "10px"; // Initial height (small size)
         document.body.appendChild(beam);
 
-        // Starting and ending coordinates (you can adjust these)
-        const startX = pos1.x; // Start position x-coordinate
-        const startY = pos1.y; // Start position y-coordinate
-        const endX = pos2.x; // End position x-coordinate
-        const endY = pos2.y; // End position y-coordinate
-        const duration = 1000; // Animation duration in milliseconds
+        // Starting and ending coordinates
+        const startX = pos1.x; // Start x-coordinate
+        const startY = pos1.y; // Start y-coordinate
+        const endX = pos2.x; // End x-coordinate
+        const endY = pos2.y; // End y-coordinate
 
-        // Set initial position and display
+        // Calculate distance and angle
+        const deltaX = endX - startX;
+        const deltaY = endY - startY;
+        const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+        const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI); // Convert radians to degrees
+
+        // Set initial position and rotation
         beam.style.left = `${startX}px`;
         beam.style.top = `${startY}px`;
-        beam.style.display = "block"; // Show the beam
+        beam.style.transformOrigin = "left center"; // Scale from the left edge
+        beam.style.transform = `rotate(${angle}deg) scaleX(0)`; // Start with 0 width, rotated
 
-        // Use CSS transition to animate the movement
-        beam.style.transition = `left ${duration}ms linear, top ${duration}ms linear`;
+        // Animate scale to final width
+        beam.style.transition = "transform 1s linear"; // 1-second duration for scaling
+        beam.style.transform = `rotate(${angle}deg) scaleX(${distance / 10})`; // Scale width to distance
 
-        // Trigger the animation after a short delay
+        // Remove beam after 2 seconds
         setTimeout(() => {
-            beam.style.left = `${endX}px`;
-            beam.style.top = `${endY}px`;
-        }, 10);
-
-        // Hide the beam after the animation completes
-        setTimeout(() => {
-            beam.style.display = "none";
-            beam.style.transition = ""; // Reset transition for future animations
-        }, duration);
-        console.log("end")
+            beam.remove(); // Remove the element from the DOM
+            console.log("Beam animation ended and removed");
+        }, 2000);
     }
 };
 
