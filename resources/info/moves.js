@@ -25,11 +25,13 @@ const moves = {
 
 const classes = {
     beam: (movedata, pos1, pos2) => {
+        console.log("Started")
         const beam = document.createElement("img");
         beam.src = movedata.texture || "";
         beam.style.position = "absolute"; // Makes it easier to position for animation
         beam.style.width = "50px";
         beam.style.height = "10px";
+        document.body.appendChild(beam);
 
         // Starting and ending coordinates (you can adjust these)
         const startX = pos1.x; // Start position x-coordinate
@@ -57,6 +59,7 @@ const classes = {
             beam.style.display = "none";
             beam.style.transition = ""; // Reset transition for future animations
         }, duration);
+        console.log("end")
     }
 };
 
