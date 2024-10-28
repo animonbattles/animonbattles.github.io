@@ -31,7 +31,7 @@ const classes = {
         beam.src = movedata.texture || "";
         beam.style.position = "absolute"; // Absolute for precise positioning
         beam.style.width = "10px"; // Initial width (small size)
-        beam.style.height = "10px"; // Initial height (small size)
+        beam.style.height = "100px"; // Initial height (small size)
         document.body.appendChild(beam);
 
         // Starting and ending coordinates
@@ -57,10 +57,10 @@ const classes = {
         beam.style.transform = `rotate(${angle}deg) scaleX(${distance / 10})`; // Scale width to distance
 
         // Remove beam after 2 seconds
-        setTimeout(() => {
-            beam.remove(); // Remove the element from the DOM
-            console.log("Beam animation ended and removed");
-        }, 2000);
+       // setTimeout(() => {
+        //    beam.remove(); // Remove the element from the DOM
+        //    console.log("Beam animation ended and removed");
+        //}, 2000);
     }
 };
 
