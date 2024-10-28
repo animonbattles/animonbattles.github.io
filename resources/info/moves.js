@@ -38,13 +38,15 @@ const classes = {
         const endY = pos2.y;
 
         const deltaX = endX - startX;
+        console.log("delta x: ", deltaX)
         const deltaY = endY - startY;
+        console.log("delta y: ", deltaY)
         const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
         const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
 
         beam.style.left = `${startX}px`;
         beam.style.top = `${startY}px`;
-        beam.style.transformOrigin = "left center";
+        beam.style.transformOrigin = "center";
         beam.style.transform = `rotate(${angle}deg) scaleX(0)`;
 
         beam.style.transition = "transform 1s linear";
