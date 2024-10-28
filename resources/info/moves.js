@@ -5,7 +5,8 @@ const types = {
 const moves = {
     "Solar Beam": {
         type: "Grass",
-        class: "beam"
+        class: "beam",
+        texture: "https://i.postimg.cc/9Fh3Jxfr/Solar-Beam.png"
     },
     "Grass Whip": {
         type: "Grass",
@@ -29,7 +30,6 @@ const classes = {
         beam.src = movedata.texture || "";
         beam.style.position = "absolute";
         beam.style.height = "100px"; // beam width
-        beam.style.width = "10px"
         document.body.appendChild(beam);
 
         const startX = pos1.x;
@@ -47,6 +47,7 @@ const classes = {
         beam.style.transformOrigin = "left center";
         beam.style.transform = `rotate(${angle}deg) scaleX(0)`;
 
+        beam.style.transition = "transform 1s linear";
         beam.style.transform = `rotate(${angle}deg) scaleX(${distance / 10})`;
 
         setTimeout(() => {
